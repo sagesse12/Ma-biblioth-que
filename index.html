@@ -10,79 +10,101 @@
 
 <body>
 
-    <nav>
-        <ul>
-            <a href="index.html">Accueil</a>
-            <a href="books.html">Livre</a>
-            <a href="register.html">inscription</a>
-            <a href="login.html">Connexion</a>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="books.html">Livres</a></li>
+            <li><a href="register.html">Inscription</a></li>
+            <li><a href="login.html">Connexion</a></li>
         </ul>
     </nav>
+
+    <!-- Hero Section -->
     <header class="hero">
-        <h1>Votre Prochain Chapitre commence Ici.</h1>
-        <p>explorez des milliers d'ouvrages, Classique,Culturel, et autre .</p>
+        <h1>Votre Prochain Chapitre commence ici</h1>
+        <p>Explorez des milliers d’ouvrages classiques, culturels et contemporains.</p>
+
         <div class="search-bar">
-            <input type="text" placeholder="Rechercher un livre, un auteur,une collection..... ">
+            <input type="text" placeholder="Rechercher un livre, un auteur, une collection…">
             <button>Rechercher</button>
         </div>
     </header>
 
-    <section class="stats">
-        <div class="stats-item">
-            <h3>500K</h3>
-            <p>Ouvrages</p>
-        </div>
-        <div class="stats-item">
-            <h3>200</h3>
-            <p>Nouvauté/Moi</p>
-        </div>
-        <div class="stats-item">
-            <h3>100K</h3>
-            <p>Auteurs</p>
-        </div>
-    </section>
-    <section>
-        <div class="section-titre">
-            <h2>Les Coups de Coeur</h2>
-            <p>La selection de nos bibliotheque pour vous évader</p>
-        </div>
-        <div class="book-grid">
-            <div class="book-card">
-                <img src="" alt="Livre">
-                <h4>Le Silence des Etoiles</h4>
-            </div>
-            <div class="book-card">
-                <img src="" alt="Livre">
-                <h4>L'Art du Design</h4>
-            </div>
-            <div class="book-card">
-                <img src="" alt="Livre">
-                <h4>Voyage Culinaire</h4>
-            </div>
-            <div>
-                <img src="" alt="Livre">
-                <h4>Histoire Oubliée</h4>
-            </div>
-        </div>
-    </section>
-    <section class="agenda">
-        <div class="section-title">
-            <h2>Agenda Culturel</h2>
-        </div>
-        <div class="event-card">
-            <div class="event-date">
-                <span style="font-size: 1.5rem; font-weight: bold;">12</span>
-                <span>OCT</span>
-            </div>
-            <div class="event-info">
-                <h3>Club Mango & Comics</h3>
-                <p>Venez partager vos derniere lecture et ecouvrir les nouveautés du rayon jeunesse.</p>
-                <span>sales des miroir</span>
-            </div>
-        </div>
+    <main>
 
-    </section>
+        <!-- Statistiques -->
+        <section class="stats">
+            <div class="stats-item">
+                <h3>500K</h3>
+                <p>Ouvrages</p>
+            </div>
+            <div class="stats-item">
+                <h3>200</h3>
+                <p>Nouveautés / Mois</p>
+            </div>
+            <div class="stats-item">
+                <h3>100K</h3>
+                <p>Auteurs</p>
+            </div>
+        </section>
 
+        <!-- Coups de cœur -->
+        <section class="featured-books">
+            <div class="section-title">
+                <h2>Les Coups de Cœur</h2>
+                <p>La sélection de nos bibliothécaires pour vous évader</p>
+            </div>
+
+            <div class="book-grid">
+                <div class="book-card">
+                    <img src="image/captive.jpg" alt="Le Silence des Étoiles">
+                    <h4>captive</h4>
+                </div>
+
+                <div class="book-card">
+                    <img src="image/cuero assassono.jpeg" alt="L'Art du Design">
+                    <h4>Cuero assassino</h4>
+                </div>
+
+                <div class="book-card">
+                    <img src="image/top intense.jpg" alt="Voyage Culinaire">
+                    <h4>Trop intense</h4>
+                </div>
+
+                <div class="book-card">
+                    <img src="image/mark majesty.jpg" alt="Histoire Oubliée">
+                    <h4>Mark majesty</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agenda -->
+        <section class="agenda">
+            <div class="section-title">
+                <h2>Agenda Culturel</h2>
+            </div>
+
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="day">12</span>
+                    <span class="month">OCT</span>
+                </div>
+
+                <div class="event-info">
+                    <h3>Club Manga & Comics</h3>
+                    <p>
+                        Venez partager vos dernières lectures et découvrir
+                        les nouveautés du rayon jeunesse.
+                    </p>
+                    <span class="location">Salle des miroirs</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p> Ma bibliothèque Numeriqe - Tout droits reservés</p>
+    </footer>
 
 </body>
 

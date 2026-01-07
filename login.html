@@ -1,178 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion | Espace Membre</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1a2a6c;
-            --accent: #d4a373;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* Fond avec une image de bibliothèque floutée pour l'immersion */
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* La carte de connexion avec effet de flou (Glassmorphism) */
-        .login-card {
-            background: rgba(255, 255, 255, 0.95);
-            width: 400px;
-            padding: 50px 40px;
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            text-align: center;
-            backdrop-filter: blur(10px);
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .login-card h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .login-card p {
-            color: #777;
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-        }
-
-        /* Style des champs de saisie */
-        .input-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        .input-group label {
-            display: block;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 5px;
-            margin-left: 5px;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 15px 20px;
-            border-radius: 50px; /* Bords très arrondis pour le style */
-            border: 1px solid #eee;
-            background: #f9f9f9;
-            outline: none;
-            transition: 0.3s;
-            box-sizing: border-box;
-        }
-
-        .input-group input:focus {
-            border-color: var(--accent);
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(212, 163, 115, 0.2);
-        }
-
-        /* Lien mot de passe oublié */
-        .forgot-password {
-            display: block;
-            text-align: right;
-            font-size: 0.8rem;
-            color: var(--accent);
-            text-decoration: none;
-            margin-bottom: 25px;
-        }
-
-        /* Bouton de connexion stylé */
-        .btn-login {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 50px;
-            background: linear-gradient(45deg, var(--primary), #b21f1f);
-            color: white;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: 0 10px 20px rgba(26, 42, 108, 0.3);
-            transition: 0.3s;
-        }
-
-        .btn-login:hover {
-            transform: scale(1.02);
-            box-shadow: 0 12px 25px rgba(26, 42, 108, 0.4);
-        }
-
-        .register-text {
-            margin-top: 25px;
-            font-size: 0.85rem;
-            color: #555;
-        }
-
-        .register-text a {
-            color: var(--primary);
-            font-weight: 700;
-            text-decoration: none;
-            border-bottom: 2px solid var(--accent);
-        }
-
-        /* Petit cercle décoratif */
-        .brand-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 1.5rem;
-        }
-    </style>
+    <title>Connexion</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <div class="login-card">
-        <div class="brand-icon">📖</div>
-        <h2>Bon retour !</h2>
-        <p>Heureux de vous revoir parmi nos lecteurs.</p>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="books.html">Livres</a></li>
+            <li><a href="register.html">Inscription</a></li>
+            <li><a href="login.html">Connexion</a></li>
+        </ul>
+    </nav>
 
-        <form action="index.html">
-            <div class="input-group">
-                <label>Identifiant ou Email</label>
-                <input type="email" placeholder="votre@email.com" required>
+    <div class="auth-container">
+        <div class="auth-image"></div>
+
+        <div class="auth-form">
+            <h2>Connexion</h2>
+            <p>Accédez à votre bibliothèque personnelle</p>
+
+            <form action="login.html">
+                <input type="text" placeholder="Nom d'utilisateur" required>
+                <input type="password" placeholder="Mot de passe" required>
+
+                <button type="submit">S'inscrire</button>
+            </form>
+
+            <div class="link">
+                Pas encore inscrit ? <a href="register.html">Créer un compte</a>
             </div>
-
-            <div class="input-group">
-                <label>Mot de passe</label>
-                <input type="password" placeholder="••••••••" required>
-            </div>
-
-            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
-
-            <button type="submit" class="btn-login">Se connecter</button>
-        </form>
-
-        <p class="register-text">
-            Pas encore de compte ? <a href="register.html">Créer un compte</a>
-        </p>
+        </div>
     </div>
 
 </body>
+
 </html>
