@@ -1,11 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des livres</title>
+    <title>Catalogue de la bibliothèque</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="books.html">Livres</a></li>
+            <li><a href="register.html">Inscription</a></li>
+            <li><a href="login.html">Connexion</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-small" style="background: linear-gradient(120deg, #1e3a5f, #5a4fcf); color: white; text-align: center; padding: 60px 20px;">
+        <h1>📚 Catalogue de la bibliothèque</h1>
+        <p>Trouvez votre prochaine lecture parmi nos ouvrages</p>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Rechercher par titre ou auteur...">
+            <button type="button">Rechercher</button>
+        </div>
+    </section>
+
+    <main class="featured-books">
+        <div class="book-grid" id="bookGrid">
+
+            <div class="book-card" data-title="Le Petit Prince" data-author="Antoine de Saint-Exupéry">
+                <img src="image/ombre.jpeg" alt="Le Petit Prince">
+                <div class="livre-info">
+                    <h4>Le Petit Prince</h4>
+                    <p><strong>Auteur :</strong> Antoine de Saint-Exupéry</p>
+                    <p><strong>Catégorie :</strong> Roman</p>
+                    <p class="status-dispo" style="color: #27ae60; font-weight: bold;">Disponible</p>
+                </div>
+            </div>
+
+            <div class="book-card" data-title="L'Étranger" data-author="Albert Camus">
+                <img src="image/mark majesty.jpg" alt="L'Étranger">
+                <div class="livre-info">
+                    <h4>L'Étranger</h4>
+                    <p><strong>Auteur :</strong> Albert Camus</p>
+                    <p><strong>Catégorie :</strong> Philosophie</p>
+                    <p class="status-emprunte" style="color: #e74c3c; font-weight: bold;">Emprunté</p>
+                </div>
+            </div>
+
+            <div class="book-card" data-title="Les Misérables" data-author="Victor Hugo">
+                <img src="image/bibliotheque.jpg" alt="Les Misérables">
+                <div class="livre-info">
+                    <h4>Les Misérables</h4>
+                    <p><strong>Auteur :</strong> Victor Hugo</p>
+                    <p><strong>Catégorie :</strong> Classique</p>
+                    <p style="color: #27ae60; font-weight: bold;">Disponible</p>
+                </div>
+            </div>
+
+            <div class="book-card" data-title="1984" data-author="George Orwell">
+                <img src="image/captive.jpg" alt="1984">
+                <div class="livre-info">
+                    <h4>1984</h4>
+                    <p><strong>Auteur :</strong> George Orwell</p>
+                    <p><strong>Catégorie :</strong> Science-fiction</p>
+                    <p style="color: #27ae60; font-weight: bold;">Disponible</p>
+                </div>
+            </div>
+
+            <div class="book-card" data-title="Harry Potter" data-author="J.K. Rowling">
+                <img src="image/cuero assassono.jpeg" alt="Harry Potter">
+                <div class="livre-info">
+                    <h4>Harry Potter</h4>
+                    <p><strong>Auteur :</strong> J.K. Rowling</p>
+                    <p><strong>Catégorie :</strong> Fantastique</p>
+                    <p style="color: #e74c3c; font-weight: bold;">Emprunté</p>
+                </div>
+            </div>
+
+            <div class="book-card" data-title="Don Quichotte" data-author="Cervantès">
+                <img src="image/mark majesty.jpg" alt="Don Quichotte">
+                <div class="livre-info">
+                    <h4>Don Quichotte</h4>
+                    <p><strong>Auteur :</strong> Cervantès</p>
+                    <p><strong>Catégorie :</strong> Roman</p>
+                    <p style="color: #27ae60; font-weight: bold;">Disponible</p>
+                </div>
+            </div>
+
+            <div class="book-card" data-title="Le Rouge et le Noir" data-author="Stendhal">
+                <img src="image/memoires-.jpg" alt="Le Rouge et le Noir">
+                <div class="livre-info">
+                    <h4>Le Rouge et le Noir</h4>
+                    <p><strong>Auteur :</strong> Stendhal</p>
+                    <p><strong>Catégorie :</strong> Classique</p>
+                    <p style="color: #27ae60; font-weight: bold;">Disponible</p>
+                </div>
+            </div>
+
+            <div class="book-card" data-title="Madame Bovary" data-author="Gustave Flaubert">
+                <img src="image/cuero assassono.jpeg" alt="Madame Bovary">
+                <div class="livre-info">
+                    <h4>Madame Bovary</h4>
+                    <p><strong>Auteur :</strong> Gustave Flaubert</p>
+                    <p><strong>Catégorie :</strong> Roman</p>
+                    <p style="color: #e74c3c; font-weight: bold;">Emprunté</p>
+                </div>
+            </div>
+
+            <div class="book-card" data-title="Germinal" data-author="Émile Zola">
+                <img src="image/top intense.jpg" alt="Germinal">
+                <div class="livre-info">
+                    <h4>Germinal</h4>
+                    <p><strong>Auteur :</strong> Émile Zola</p>
+                    <p><strong>Catégorie :</strong> Roman social</p>
+                    <p style="color: #27ae60; font-weight: bold;">Disponible</p>
+                </div>
+            </div>
+
+            <div class="book-card" data-title="La Peste" data-author="Albert Camus">
+                <img src="image/ombre.jpeg" alt="La Peste">
+                <div class="livre-info">
+                    <h4>La Peste</h4>
+                    <p><strong>Auteur :</strong> Albert Camus</p>
+                    <p><strong>Catégorie :</strong> Roman</p>
+                    <p style="color: #27ae60; font-weight: bold;">Disponible</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 - Bibliothèque Municipale | Tous droits réservés</p>
+    </footer>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let searchVal = this.value.toLowerCase();
+            let cards = document.querySelectorAll('.book-card');
+            
+            cards.forEach(card => {
+                let title = card.getAttribute('data-title').toLowerCase();
+                let author = card.getAttribute('data-author').toLowerCase();
+                
+                if (title.includes(searchVal) || author.includes(searchVal)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

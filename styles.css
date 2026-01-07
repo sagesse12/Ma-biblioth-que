@@ -9,6 +9,53 @@ body {
     background-color: #f6f7fb;
     color: #333;
     line-height: 1.6;
+}/* =========================
+   AJUSTEMENTS CATALOGUE
+========================= */
+
+/* Version réduite du Hero pour les pages secondaires */
+.hero-small {
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url(image/bibliotheque.jpg);
+}
+
+/* Style spécifique pour les infos des livres */
+.livre-info {
+    padding: 10px 5px;
+    text-align: left;
+}
+
+.livre-info p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 4px 0;
+}
+
+/* Couleurs de disponibilité */
+.status {
+    font-weight: bold;
+    margin-top: 10px !important;
+}
+
+.disponible {
+    color: #27ae60;
+}
+
+.emprunte {
+    color: #e74c3c;
+}
+
+/* Amélioration de la barre de recherche pour qu'elle soit visible sur fond bleu */
+.hero-small .search-bar input {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* On réutilise votre .book-card existant pour l'unité visuelle */
+.book-card {
+    cursor: pointer;
 }
 
 /* =========================
@@ -60,6 +107,7 @@ body {
     color: #fff;
     text-align: center;
     padding: 100px 20px;
+    background-image: url("image/bibliotheque.jpg");
 }
 
 .hero h1 {
@@ -254,11 +302,13 @@ body {
     padding: 40px;
     gap: 20px;
 }
-
 .auth-image {
     flex: 1;
-    width: 50%;
-    background: url("image/bibliotheque.jpg") center/cover no-repeat;
+    min-height: 400px;
+    background-image: url("image/bibliotheque.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 15px;
 }
 
