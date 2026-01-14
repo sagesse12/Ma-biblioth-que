@@ -19,10 +19,11 @@
         </ul>
     </nav>
 
-    <section class="hero-small" style="background: linear-gradient(120deg, #1e3a5f, #5a4fcf); color: white; text-align: center; padding: 60px 20px;">
+    <section class="hero-small"
+        style="background-image: url(image/bibliotheque.jpg); color: white; text-align: center; padding: 60px 20px;">
         <h1>📚 Catalogue de la bibliothèque</h1>
         <p>Trouvez votre prochaine lecture parmi nos ouvrages</p>
-        
+
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Rechercher par titre ou auteur...">
             <button type="button">Rechercher</button>
@@ -33,7 +34,7 @@
         <div class="book-grid" id="bookGrid">
 
             <div class="book-card" data-title="Le Petit Prince" data-author="Antoine de Saint-Exupéry">
-                <img src="image/ombre.jpeg" alt="Le Petit Prince">
+                <img src="image/le petit prince.jpg" alt="Le Petit Prince">
                 <div class="livre-info">
                     <h4>Le Petit Prince</h4>
                     <p><strong>Auteur :</strong> Antoine de Saint-Exupéry</p>
@@ -42,6 +43,24 @@
                 </div>
             </div>
 
+            <div class="book-card" data-title="L'invisible" data-author="Danielle Dousse">
+                <img src="image/l'invisible.jpg" alt="L'Étranger">
+                <div class="livre-info">
+                    <h4>Femme de menage</h4>
+                    <p><strong>Auteur :</strong> Danielle Dousse</p>
+                    <p><strong>Catégorie :</strong> Roman</p>
+                    <p class="status-emprunte" style="color: #e74c3c; font-weight: bold;">Emprunté</p>
+                </div>
+            </div>
+            <div class="book-card" data-title="Viens on s'aime" data-author="Morgane Moncomble">
+                <img src="image/viens on s'aime.jpg" alt="Le Petit Prince">
+                <div class="livre-info">
+                    <h4>Vien on s'aime</h4>
+                    <p><strong>Auteur :</strong> Morgane Moncomble</p>
+                    <p><strong>Catégorie :</strong> Roman</p>
+                    <p class="status-dispo" style="color: #27ae60; font-weight: bold;">Disponible</p>
+                </div>
+            </div>
             <div class="book-card" data-title="L'Étranger" data-author="Albert Camus">
                 <img src="image/mark majesty.jpg" alt="L'Étranger">
                 <div class="livre-info">
@@ -52,31 +71,41 @@
                 </div>
             </div>
 
-            <div class="book-card" data-title="Les Misérables" data-author="Victor Hugo">
-                <img src="image/bibliotheque.jpg" alt="Les Misérables">
+            <div class="book-card" data-title="Noel et autre desastres" data-author="Victor Hugo">
+                <img src="image/noel et autre desastres.jpg" alt="Les Misérables">
                 <div class="livre-info">
-                    <h4>Les Misérables</h4>
+                    <h4>Noel et autre desastre</h4>
                     <p><strong>Auteur :</strong> Victor Hugo</p>
                     <p><strong>Catégorie :</strong> Classique</p>
                     <p style="color: #27ae60; font-weight: bold;">Disponible</p>
                 </div>
             </div>
+            <div class="book-card" data-title="Cuero assassino" data-author="J.K. Rowling">
+                <img src="image/cuero assassono.jpeg" alt="Harry Potter">
+                <div class="livre-info">
+                    <h4>Cuero assassono</h4>
+                    <p><strong>Auteur :</strong> J.K. Rowling</p>
+                    <p><strong>Catégorie :</strong> Fantastique</p>
+                    <p style="color: #e74c3c; font-weight: bold;">Emprunté</p>
+                </div>
+            </div>
 
-            <div class="book-card" data-title="1984" data-author="George Orwell">
+
+            <div class="book-card" data-title="captive" data-author="George Orwell">
                 <img src="image/captive.jpg" alt="1984">
                 <div class="livre-info">
-                    <h4>1984</h4>
+                    <h4>Cative</h4>
                     <p><strong>Auteur :</strong> George Orwell</p>
                     <p><strong>Catégorie :</strong> Science-fiction</p>
                     <p style="color: #27ae60; font-weight: bold;">Disponible</p>
                 </div>
             </div>
 
-            <div class="book-card" data-title="Harry Potter" data-author="J.K. Rowling">
-                <img src="image/cuero assassono.jpeg" alt="Harry Potter">
+            <div class="book-card" data-title="a un clic de toi" data-author="eva kim">
+                <img src="image/a un clic de toi.jpg" alt="Harry Potter">
                 <div class="livre-info">
-                    <h4>Harry Potter</h4>
-                    <p><strong>Auteur :</strong> J.K. Rowling</p>
+                    <h4>A un clic de toi</h4>
+                    <p><strong>Auteur :</strong>Eva kim</p>
                     <p><strong>Catégorie :</strong> Fantastique</p>
                     <p style="color: #e74c3c; font-weight: bold;">Emprunté</p>
                 </div>
@@ -140,14 +169,14 @@
     </footer>
 
     <script>
-        document.getElementById('searchInput').addEventListener('input', function() {
+        document.getElementById('searchInput').addEventListener('input', function () {
             let searchVal = this.value.toLowerCase();
             let cards = document.querySelectorAll('.book-card');
-            
+
             cards.forEach(card => {
                 let title = card.getAttribute('data-title').toLowerCase();
                 let author = card.getAttribute('data-author').toLowerCase();
-                
+
                 if (title.includes(searchVal) || author.includes(searchVal)) {
                     card.style.display = "block";
                 } else {

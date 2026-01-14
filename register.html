@@ -23,10 +23,10 @@
         <div class="auth-form">
             <h2>Inscription</h2>
             <p>Rejoignez notre bibliothèque en ligne</p>
-            <form action="login.html">
-                <input type="text" placeholder="Nom complet" required>
-                <input type="email" placeholder="Adresse email" required>
-                <input type="password" placeholder="Mot de passe" required>
+            <form action="process_register.php" method="POST">
+                <input type="text" name="name" placeholder="Nom complet" required>
+                <input type="email" name="email" placeholder="Adresse email" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
                 <input type="password" placeholder="Confirmer le mot de passe" required>
 
                 <button type="submit">S'inscrire</button>
