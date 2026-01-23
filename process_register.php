@@ -26,7 +26,7 @@ if ($conn->connect_error) {
     // 2. Connexion à la base de données
     // IMPORTANT : Utilisez '127.0.0.1' au lieu de 'localhost' pour forcer l'usage du port 3307
     /*$conn = new mysqli('127.0.0.1', 'root', '', 'mabibliotheque', 3307);
-
+ 
     // Vérifier la connexion
     if ($conn->connect_error) {
         echo "<script> alert('Erreur lors de la connexion à la base de données'); window.history.back(); </script>";
